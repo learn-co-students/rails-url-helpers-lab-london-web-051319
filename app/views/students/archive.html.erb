@@ -1,0 +1,17 @@
+<p>Activate yourself:</p>
+
+<form action="<%= student_path %>" method="POST">
+  <input type="hidden" name="_method" value="patch">
+<div>
+  <input type="radio" id="active" name="student[active]" value="active">
+  <label for="active">Active</label>
+</div>
+
+<div>
+  <input type="radio" id="inactive" name="student[inactive]" value="Inactive">
+  <label for="inactive">Inactive</label>
+</div>
+<div>
+    <button type="submit">Submit</button>
+  </div>
+</form>
