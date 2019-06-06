@@ -1,0 +1,11 @@
+<h1>Edit student profile for <%= "#{@student.first_name} #{@student.last_name}"%></h1>
+
+<form action="<%=student_path(@student)%>" method="POST">
+   <input type="hidden" id="hidden" name="_method" value="PATCH" />
+   <label for="name_first">First Name: </label><br><br>
+   <input type="text" name="first_name" id="name_first" required/> <br><br>
+   <label for="name_last">Last Name: </label><br><br>
+   <input type="text" name="second_name" id="name_last" required/><br><br>
+   <input type="hidden" name="updated_at" value="<%=DateTime.now%>"/>
+   <input type="submit" value="Commit changes"/>
+</form>

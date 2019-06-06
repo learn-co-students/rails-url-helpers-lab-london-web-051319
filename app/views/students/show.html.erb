@@ -1,1 +1,14 @@
 <h1><%= @student.to_s %></h1>
+
+<h3>Active Status:</h3>
+<p>"This student is currently <%= @student.active == true ? "active" : "inactive" %>."</p>
+<p>To edit this profile, <%= link_to "click here", edit_student_path(@student)%>.</p>
+<p>To activate this profile, <%= link_to "click here", activate_path(@student)%>.</p>
+
+<br>
+<p>To delete this profile, click the button below. Please note that this action cannot be undone.</p>
+
+<form action="<%=student_path(@student)%>" method="post">
+   <input type=hidden name="_method" value="delete" />
+   <input type=submit value="Delete profile" />
+</form>
