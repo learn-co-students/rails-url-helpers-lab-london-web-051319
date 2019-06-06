@@ -1,0 +1,10 @@
+<h1>Add a new student profile</h1>
+<form action="<%= students_path %>" method="post">
+   <label for="name_first">First Name: </label><br><br>
+   <input type="text" name="first_name" id="name_first" required/> <br><br>
+   <label for="name_last">Last Name: </label><br><br>
+   <input type="text" name="second_name" id="name_last" required/><br><br>
+   <input type="hidden" name="created_at" value="<%=DateTime.now%>"/>
+   <input type="hidden" name="updated_at" value="<%=DateTime.now%>"/>
+   <input type="submit" value="Create"/>
+</form>

@@ -1,0 +1,13 @@
+<h1>Student Activation</h1>
+
+<form action="<%=student_path(@student.id)%>" method="post">
+   <input type="hidden" id="hidden" name="_method" value="patch" />
+
+   <input type="radio" name="active" id="activated" value="true" <%= @student.active == true ? 'checked' : "" %>>Active</input> &emsp;
+
+   <input type="radio" name="active" id="deactivated" value="false" <%= @student.active == false ? 'checked' : "" %>>Inactive</input>
+
+   <input type="hidden" name="updated_at" value="<%= DateTime.now %>"/>
+   <br><br>
+<input type="submit" value="Submit changes"/>
+</form>

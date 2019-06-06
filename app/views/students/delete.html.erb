@@ -1,0 +1,10 @@
+<h1>Delete Student Profile</h1>
+
+<h2>Student Name: <%= "#{@student.first_name} #{@student.last_name}" %></h2>
+
+<p>If you are absolutely certain that you wish to delete this profile, click the button below:</p>
+
+<form action="" method="post">
+   <input type=hidden name="_method" value="delete" />
+   <input type=submit value="Delete profile" />
+</form>
